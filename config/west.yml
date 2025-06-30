@@ -3,8 +3,8 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
 
-    - name: tokyo2006
-      url-base: https://github.com/tokyo2006
+    - name: a741725193
+      url-base: https://github.com/a741725193
 
     - name: englmaxi
       url-base: https://github.com/englmaxi
@@ -16,10 +16,9 @@ manifest:
       import: app/west.yml
 
     # dongle shield with corne layout
-    - name: prospector-zmk-module
-      remote: tokyo2006
-      # revision: micro_spi2
-      revision: change_spi2
+    - name: zmk-corne-dongle
+      remote: a741725193
+      revision: main
 
     - name: zmk-dongle-display
       remote: englmaxi
