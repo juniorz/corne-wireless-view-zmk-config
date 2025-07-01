@@ -3,9 +3,6 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
 
-    - name: a741725193
-      url-base: https://github.com/a741725193
-
     - name: juniorz
       url-base: https://github.com/juniorz
 
