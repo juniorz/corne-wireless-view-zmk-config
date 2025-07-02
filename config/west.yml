@@ -9,8 +9,8 @@ manifest:
     - name: englmaxi
       url-base: https://github.com/englmaxi
 
-    # - name: gpeye
-    #   url-base: https://github.com/GPeye
+    - name: gpeye
+      url-base: https://github.com/GPeye
 
   projects:
     - name: zmk
@@ -27,9 +27,9 @@ manifest:
       remote: englmaxi
       revision: main
 
-    # - name: mario-peripheral-animation
-    #   remote: gpeye
-    #   revision: main
+    - name: mario-peripheral-animation
+      remote: gpeye
+      revision: main
 
     # - name: hammerbeam-slideshow
     #   remote: gpeye

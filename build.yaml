@@ -23,7 +23,7 @@ include:
     artifact-name: corne_left_oled
 
   - board: nice_nano_v2
-    shield: corne_right nice_view_adapter nice_view
+    shield: corne_right nice_view_adapter nice_view_custom
     cmake-args: -DCONFIG_ZMK_STUDIO=n -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_ZMK_DISPLAY_STATUS_SCREEN_CUSTOM=y
     artifact-name: corne_right_oled
 
