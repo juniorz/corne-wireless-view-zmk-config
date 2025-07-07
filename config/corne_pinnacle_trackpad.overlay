@@ -3,16 +3,12 @@
 /* cirque trackpad I2C pins */
 /* See: https://zmk.dev/docs/development/hardware-integration/pointing?part-type=peripheral#input-device */
 
-&i2c0 {
-    glidepoint0: glidepoint@2a {
-        compatible = "cirque,pinnacle";
-        reg = <0x2a>;
-        status = "okay";
+/*
+&glidepoint0 {
         dr-gpios = <&gpio1 1 (GPIO_ACTIVE_HIGH)>;         // P1.01 (maybe it is P1.02)
 
         sensitivity = "4x";
         sleep;
-        //no-taps;
 
         // see: https://github.com/petejohanson/cirque-input-module/blob/main/dts/bindings/input/cirque%2Cpinnacle-common.yaml
         //rotate-90 = false;
@@ -24,7 +20,6 @@
         //sensitivity = 1x | 2x | 3x | 4x
         //x-axis-z-min = 5;
         //y-axis-z-min= 4;
-    };
 };
 
 &i2c0_default {
@@ -32,3 +27,5 @@
       bias-pull-up;
     };
 };
+
+*/
