@@ -1,4 +1,3 @@
-#include "corne.dtsi"
 #include <dt-bindings/zmk/input_transform.h>
 
 /* cirque trackpad I2C pins */
@@ -11,7 +10,7 @@
         status = "okay";
         dr-gpios = <&gpio1 1 (GPIO_ACTIVE_HIGH)>;         // P1.01 (maybe it is P1.02)
 
-        sensitivity = "2x";
+        sensitivity = "4x";
         sleep;
         //no-taps;
 
@@ -44,5 +43,5 @@
     // input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
 
     // device on right is tilted a few degrees
-    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>;
+    // input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>;
 };
