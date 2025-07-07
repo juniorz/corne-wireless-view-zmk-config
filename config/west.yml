@@ -23,6 +23,11 @@ manifest:
       remote: juniorz
       revision: main
 
+    # cirque pinnacle
+    - name: zmk-keyboard-cirque-pinnacle
+      remote: juniorz
+      revision: alpha
+
     - name: zmk-dongle-display
       remote: englmaxi
       revision: main

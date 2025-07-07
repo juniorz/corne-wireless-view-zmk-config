@@ -1,6 +1,0 @@
-#include "corne.dtsi"
-
-/* trackpoint configuration intended for CENTRAL device */
-&glidepoint_listener {
-    status = "okay";    // enable
-};
