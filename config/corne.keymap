@@ -10,6 +10,13 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
+&glidepoint {
+  compatible = "cirque,pinnacle";
+  status = "okay";
+  //dr-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;         // D1 pin
+  dr-gpios = <&gpio1 1 (GPIO_ACTIVE_HIGH)>;       // P1.01 (maybe it is P1.02)
+};
+
 / {
         keymap {
                 compatible = "zmk,keymap";
