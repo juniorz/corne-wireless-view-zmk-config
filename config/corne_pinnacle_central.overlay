@@ -1,5 +1,6 @@
 /* See: https://zmk.dev/docs/development/hardware-integration/pointing?part-type=peripheral#peripheral-configuration-1 */
 
+#include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
 / {
