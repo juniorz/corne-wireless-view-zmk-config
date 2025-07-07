@@ -1,5 +1,8 @@
 
 /* cirque trackpad I2C pins */
+/* See: https://zmk.dev/docs/development/hardware-integration/pointing?part-type=peripheral#input-device */
+
+/* trick: adds the device as "disabled" to easily swap central/peripheral roles */
 &i2c0 {
     status = "disabled";
     glidepoint0: glidepoint@2a {                          // glidepoint0 = central, glidepoint1 = peripheral
@@ -25,52 +28,22 @@
     };
 };
 
+
+/* See: https://zmk.dev/docs/development/hardware-integration/pointing?part-type=peripheral#shared-configuration-1 */
 / {
-	/* assign `input-listener` to all pointing devices */
-	/* &glidepoint0 on central, &glidepoint1 on peripheral */
-    tpad_central_listener {
-        compatible = "zmk,input-listener";
-        device = <&glidepoint0>;
-        //xy-swap;
-        y-invert;
-        //x-invert;
-        scale-multiplier = <2>;
-	};
+    split_inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
 
-    tpad_peripheral_listener {
-        compatible = "zmk,input-listener";
-        device = <&glidepoint1>;
-        //xy-swap;
-        y-invert;
-        //x-invert;
-        scale-multiplier = <2>;
-    };
-};
-
-/* nice-nano
- https://github.com/zmkfirmware/zmk/blob/e93cd31a5866cd4f50385bece7a3fb770f2ca6f8/app/boards/arm/nice_nano/nice_nano.dtsi
-&i2c0 {
-    compatible = "nordic,nrf-twi";
-    pinctrl-0 = <&i2c0_default>;
-    pinctrl-1 = <&i2c0_sleep>;
-    pinctrl-names = "default", "sleep";
-};
-
-https://github.com/zmkfirmware/zmk/blob/e93cd31a5866cd4f50385bece7a3fb770f2ca6f8/app/boards/arm/nice_nano/nice_nano-pinctrl.dtsi
-&pinctrl {
-    i2c0_default: i2c0_default {
-        group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
-                <NRF_PSEL(TWIM_SCL, 0, 20)>;
+        glidepoint_split: glidepoint_split@0 {
+            compatible = "zmk,input-split";
+            reg = <0>;
         };
     };
 
-    i2c0_sleep: i2c0_sleep {
-        group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
-                <NRF_PSEL(TWIM_SCL, 0, 20)>;
-            low-power-enable;
-        };
+    glidepoint_listener: glidepoint_listener {
+        compatible = "zmk,input-listener";
+        status = "disabled";
+        device = <&glidepoint_split>;
     };
-}
-*/
+};
