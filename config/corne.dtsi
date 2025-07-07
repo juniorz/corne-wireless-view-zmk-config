@@ -1,0 +1,76 @@
+
+/* cirque trackpad I2C pins */
+&i2c0 {
+    status = "disabled";
+    glidepoint0: glidepoint@2a {                          // glidepoint0 = central, glidepoint1 = peripheral
+        compatible = "cirque,pinnacle";
+        reg = <0x2a>;                                     // default slave address
+        status = "disabled";
+        dr-gpios = <&gpio1 1 (GPIO_ACTIVE_HIGH)>;         // P1.01 (maybe it is P1.02)
+
+        sensitivity = "2x";
+        sleep;
+        //no-taps;
+
+        // see: https://github.com/petejohanson/cirque-input-module/blob/main/dts/bindings/input/cirque%2Cpinnacle-common.yaml
+        //rotate-90 = false;
+        //x-invert = false;
+        //y-invert = false;
+        //sleep = false;
+        //no-secondary-tap = false;
+        //no-taps = false;
+        //sensitivity = 1x | 2x | 3x | 4x
+        //x-axis-z-min = 5;
+        //y-axis-z-min= 4;
+    };
+};
+
+/ {
+	/* assign `input-listener` to all pointing devices */
+	/* &glidepoint0 on central, &glidepoint1 on peripheral */
+    tpad_central_listener {
+        compatible = "zmk,input-listener";
+        device = <&glidepoint0>;
+        //xy-swap;
+        y-invert;
+        //x-invert;
+        scale-multiplier = <2>;
+	};
+
+    tpad_peripheral_listener {
+        compatible = "zmk,input-listener";
+        device = <&glidepoint1>;
+        //xy-swap;
+        y-invert;
+        //x-invert;
+        scale-multiplier = <2>;
+    };
+};
+
+/* nice-nano
+ https://github.com/zmkfirmware/zmk/blob/e93cd31a5866cd4f50385bece7a3fb770f2ca6f8/app/boards/arm/nice_nano/nice_nano.dtsi
+&i2c0 {
+    compatible = "nordic,nrf-twi";
+    pinctrl-0 = <&i2c0_default>;
+    pinctrl-1 = <&i2c0_sleep>;
+    pinctrl-names = "default", "sleep";
+};
+
+https://github.com/zmkfirmware/zmk/blob/e93cd31a5866cd4f50385bece7a3fb770f2ca6f8/app/boards/arm/nice_nano/nice_nano-pinctrl.dtsi
+&pinctrl {
+    i2c0_default: i2c0_default {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
+                <NRF_PSEL(TWIM_SCL, 0, 20)>;
+        };
+    };
+
+    i2c0_sleep: i2c0_sleep {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
+                <NRF_PSEL(TWIM_SCL, 0, 20)>;
+            low-power-enable;
+        };
+    };
+}
+*/
