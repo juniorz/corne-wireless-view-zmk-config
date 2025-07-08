@@ -5,14 +5,15 @@
     glidepoint: glidepoint@2a {
         compatible = "cirque,pinnacle";
         status = "okay";
-        dr-gpios = <&gpio1 1 (GPIO_ACTIVE_HIGH)>;         // P1.01 (maybe it is P1.02)
+
+        //FIXME: no idea why this setting doesn't change anything in an overlay
+        //dr-gpios = <&gpio1 1 (GPIO_ACTIVE_HIGH)>;         // P1.01 (maybe it is P1.02)
 
         // see: https://github.com/petejohanson/cirque-input-module/blob/main/dts/bindings/input/cirque%2Cpinnacle-common.yaml
-        sensitivity = "2x";
+        sensitivity = "1x";
         x-invert;
-
-        //rotate-90;
-        //sleep;
+        rotate-90;
+        sleep;
 
         //rotate-90;
         //x-invert;
