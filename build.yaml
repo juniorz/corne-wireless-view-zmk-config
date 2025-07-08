@@ -35,7 +35,7 @@ include:
 
   - board: nice_nano_v2
     shield: corne_right cirque_pinnacle_adapter cirque_pinnacle_trackpad
-    cmake-args: -DCONFIG_ZMK_DISPLAY=y -DCONFIG_ZMK_POINTING=y -DCONFIG_ZMK_POINTING_SMOOTH_SCROLLING=y -DZMK_SPLIT=y
+    cmake-args: -DCONFIG_ZMK_DISPLAY=n -DCONFIG_ZMK_POINTING=y -DCONFIG_ZMK_POINTING_SMOOTH_SCROLLING=y -DZMK_SPLIT=y
     artifact-name: corne_right
 
   # reset
