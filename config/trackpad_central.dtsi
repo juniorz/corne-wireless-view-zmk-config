@@ -1,7 +1,13 @@
-/* See: https://zmk.dev/docs/development/hardware-integration/pointing?part-type=peripheral#peripheral-configuration-1 */
-
+#include "cirque_pinnacle.dtsi"
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
+
+/* central device */
+&glidepoint_listener {
+    status = "okay";    // enable
+};
+
+/* See: https://zmk.dev/docs/development/hardware-integration/pointing?part-type=peripheral#peripheral-configuration-1 */
 
 /*
 / {
