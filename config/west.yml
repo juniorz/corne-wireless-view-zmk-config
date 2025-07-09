@@ -12,6 +12,9 @@ manifest:
     - name: petejohanson
       url-base: https://github.com/petejohanson
 
+    - name: gpeye
+      url-base: https://github.com/GPeye
+
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -42,10 +45,17 @@ manifest:
     # - name: zmk-split-peripheral-output-relay
     #   remote: badjeff
     #   revision: main
+
     - name: cirque-input-module
-      remote: petejohanson
-      revision: main
-      # revision: feat/idle-waker-wake-from-sleep-fixes
+          remote: petejohanson
+          revision: main
+
+    # - name: mario-peripheral-animation
+    #   remote: gpeye
+    #   revision: main
+    # - name: hammerbeam-slideshow
+    #   remote: gpeye
+    #   revision: main
 
   self:
     path: config
