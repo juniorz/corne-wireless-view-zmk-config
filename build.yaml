@@ -7,13 +7,13 @@ include:
   - board: nice_nano_v2
     shield: eyeslash_corne_central_dongle dongle_display
     snippet: studio-rpc-usb-uart
-    extra_cmake_args: -DEXTRA_CONF_FILE=config/central.conf
+    cmake-args: -DEXTRA_CONF_FILE=config/central.conf
     artifact-name: corne_central_dongle_oled
 
   - board: nice_nano_v2
     shield: corne_left nice_view_adapter nice_view
     snippet: studio-rpc-usb-uart
-    extra_cmake_args: -DEXTRA_CONF_FILE=config/central.conf
+    cmake-args: -DEXTRA_CONF_FILE=config/central.conf
     artifact-name: corne_left_central_oled
 
   - board: nice_nano_v2
