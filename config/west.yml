@@ -47,8 +47,8 @@ manifest:
     #   revision: main
 
     - name: cirque-input-module
-          remote: petejohanson
-          revision: main
+      remote: petejohanson
+      revision: main
 
     # - name: mario-peripheral-animation
     #   remote: gpeye
