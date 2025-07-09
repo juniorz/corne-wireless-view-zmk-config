@@ -26,7 +26,7 @@ manifest:
     # cirque pinnacle
     - name: zmk-keyboard-cirque-pinnacle
       remote: juniorz
-      revision: alpha
+      revision: main
       import: west.yml
 
     - name: zmk-dongle-display
