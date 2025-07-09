@@ -5,6 +5,8 @@
 / {
     cirque_pinnacle_i2c {
         glidepoint {
+            status = "okay";
+
             // P1.01 on my board
             dr-gpios = <&gpio1 1 (GPIO_ACTIVE_HIGH)>;
 
@@ -12,6 +14,9 @@
             x-invert;
             rotate-90;
             sleep;
+
+            //x-axis-z-min = <2>;
+            //y-axis-z-min = <4>;
         };
     };
 };
