@@ -1,28 +1,17 @@
-
-&i2c0 {
+&gpio1 {
     status = "okay";
+};
 
-    glidepoint: glidepoint@2a {
-        compatible = "cirque,pinnacle";
-        status = "okay";
+/ {
+    cirque_pinnacle_i2c {
+        glidepoint {
+            // P1.01 on my board
+            dr-gpios = <&gpio1 1 (GPIO_ACTIVE_HIGH)>;
 
-        //FIXME: no idea why this setting doesn't change anything in an overlay
-        //dr-gpios = <&gpio1 1 (GPIO_ACTIVE_HIGH)>;         // P1.01 (maybe it is P1.02)
-
-        // see: https://github.com/petejohanson/cirque-input-module/blob/main/dts/bindings/input/cirque%2Cpinnacle-common.yaml
-        sensitivity = "1x";
-        x-invert;
-        rotate-90;
-        sleep;
-
-        //rotate-90;
-        //x-invert;
-        //y-invert;
-        //sleep;
-        //no-secondary-tap;
-        //no-taps;
-        //sensitivity = 1x | 2x | 3x | 4x
-        //x-axis-z-min = 5;
-        //y-axis-z-min= 4;
+            sensitivity = "3x";
+            x-invert;
+            rotate-90;
+            sleep;
+        };
     };
 };
