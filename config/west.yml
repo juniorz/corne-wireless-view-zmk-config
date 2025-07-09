@@ -9,6 +9,9 @@ manifest:
     - name: englmaxi
       url-base: https://github.com/englmaxi
 
+    - name: petejohanson
+      url-base: https://github.com/petejohanson
+
     - name: gpeye
       url-base: https://github.com/GPeye
 
@@ -23,14 +26,33 @@ manifest:
       remote: juniorz
       revision: main
 
+    # cirque pinnacle
+    - name: zmk-keyboard-cirque-pinnacle
+      remote: juniorz
+      revision: main
+      import: west.yml
+
     - name: zmk-dongle-display
       remote: englmaxi
       revision: main
 
-    - name: mario-peripheral-animation
-      remote: gpeye
+    # - name: zmk-analog-input-driver
+    #   remote: badjeff
+    #   revision: main
+    # - name: zmk-split-peripheral-input-relay
+    #   remote: badjeff
+    #   revision: main
+    # - name: zmk-split-peripheral-output-relay
+    #   remote: badjeff
+    #   revision: main
+
+    - name: cirque-input-module
+      remote: petejohanson
       revision: main
 
+    # - name: mario-peripheral-animation
+    #   remote: gpeye
+    #   revision: main
     # - name: hammerbeam-slideshow
     #   remote: gpeye
     #   revision: main
