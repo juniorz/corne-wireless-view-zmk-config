@@ -1,0 +1,19 @@
+&gpio1 {
+    status = "okay";
+};
+
+&glidepoint {
+    compatible = "cirque,pinnacle";
+    status = "okay";
+
+    // P1.01 on my board
+    dr-gpios = <&gpio1 1 (GPIO_ACTIVE_HIGH)>;
+
+    sensitivity = "3x";
+    x-invert;
+    rotate-90;
+    sleep;
+
+    //x-axis-z-min = <2>;
+    //y-axis-z-min = <4>;
+};

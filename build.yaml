@@ -29,6 +29,8 @@ include:
 
   - board: nice_nano_v2
     shield: corne_right cirque_pinnacle_adapter cirque_pinnacle_trackpad
+    # must use a DTC overlay bc cirque_pinnacle_central.overlay seems to be included BEFORE the actual shield's overlay
+    cmake-args: -DDTC_OVERLAY_FILE=../../config/trackpad.overlay
     artifact-name: corne_right_trackpad
 
   # reset

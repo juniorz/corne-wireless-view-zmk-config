@@ -9,8 +9,8 @@ manifest:
     - name: englmaxi
       url-base: https://github.com/englmaxi
 
-    - name: petejohanson
-      url-base: https://github.com/petejohanson
+    # - name: petejohanson
+    #   url-base: https://github.com/petejohanson
 
     - name: gpeye
       url-base: https://github.com/GPeye
@@ -46,9 +46,9 @@ manifest:
     #   remote: badjeff
     #   revision: main
 
-    - name: cirque-input-module
-      remote: petejohanson
-      revision: main
+    # - name: cirque-input-module
+    #   remote: petejohanson
+    #   revision: main
 
     # - name: mario-peripheral-animation
     #   remote: gpeye
