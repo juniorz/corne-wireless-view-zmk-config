@@ -6,12 +6,14 @@ include:
   # - Firmware config: https://github.com/a741725193/zmk-sofle-dongle/
   - board: nice_nano_v2
     shield: eyeslash_corne_central_dongle dongle_display cirque_pinnacle_central
-    snippet: studio-rpc-usb-uart
+    snippet: studio-rpc-usb-uart cdc-acm-console
+    cmake-args: -DCONFIG_SHELL=y -DCONFIG_SHELL_LOG_BACKEND=y -DCONFIG_SENSOR_SHELL=n # -DCONFIG_SERIAL=y -D CONFIG_CONSOLE=y
     artifact-name: corne_central_dongle_oled
 
   - board: nice_nano_v2
     shield: corne_left nice_view_adapter nice_view cirque_pinnacle_central
-    snippet: studio-rpc-usb-uart
+    snippet: studio-rpc-usb-uart cdc-acm-console
+    cmake-args: -DCONFIG_SHELL=y -DCONFIG_SHELL_LOG_BACKEND=y -DCONFIG_SENSOR_SHELL=n # -DCONFIG_SERIAL=y -D CONFIG_CONSOLE=y
     artifact-name: corne_left_central_oled
 
   - board: nice_nano_v2
