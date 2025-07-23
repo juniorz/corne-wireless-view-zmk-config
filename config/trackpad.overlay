@@ -11,7 +11,7 @@
     //dr-gpios = <&pro_micro 1 (GPIO_ACTIVE_HIGH)>;
 
     // rotate-90;
-    sensitivity = "4x";
+    sensitivity = "2x";
     x-invert;
 
     // trackpad is only working when powered by USB.
