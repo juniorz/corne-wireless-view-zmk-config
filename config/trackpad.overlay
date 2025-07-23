@@ -15,8 +15,8 @@
     x-invert;
 
     // trackpad is only working when powered by USB.
-    // it might be the sleep code
-    /delete-property/ sleep;
+    // could it be the sleep configuration?
+    // /delete-property/ sleep;
 
     //x-axis-z-min = <2>;
     //y-axis-z-min = <4>;
