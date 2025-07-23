@@ -73,9 +73,9 @@ manifest:
     #   remote: badjeff
     #   revision: main
 
-    # - name: cirque-input-module
-    #   remote: petejohanson
-    #   revision: main
+    - name: cirque-input-module
+      remote: juniorz
+      revision: extra
 
     # - name: mario-peripheral-animation
     #   remote: gpeye
