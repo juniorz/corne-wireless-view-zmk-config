@@ -11,9 +11,12 @@
     //dr-gpios = <&pro_micro 1 (GPIO_ACTIVE_HIGH)>;
 
     // rotate-90;
-    sensitivity = "3x";
+    sensitivity = "4x";
     x-invert;
-    sleep;
+
+    // trackpad is only working when powered by USB.
+    // it might be the sleep code
+    /delete-property/ sleep;
 
     //x-axis-z-min = <2>;
     //y-axis-z-min = <4>;
