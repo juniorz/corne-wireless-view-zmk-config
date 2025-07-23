@@ -6,27 +6,47 @@ include:
   # - Firmware config: https://github.com/a741725193/zmk-sofle-dongle/
   - board: nice_nano_v2
     shield: eyeslash_corne_central_dongle dongle_display cirque_pinnacle_central
+    snippet: studio-rpc-usb-uart
+    artifact-name: corne_dongle
+
+  - board: nice_nano_v2
+    shield: corne_left nice_view_adapter nice_view cirque_pinnacle_central
+    snippet: studio-rpc-usb-uart
+    artifact-name: corne_left_central
+
+  - board: nice_nano_v2
+    shield: corne_left nice_view_adapter nice_view
+    artifact-name: corne_left
+
+  - board: nice_nano_v2
+    shield: corne_right cirque_pinnacle_adapter cirque_pinnacle_trackpad
+    cmake-args: -DDTC_OVERLAY_FILE=../../config/trackpad.overlay
+    artifact-name: corne_right
+
+  # debug
+  - board: nice_nano_v2
+    shield: eyeslash_corne_central_dongle dongle_display cirque_pinnacle_central
     snippet: studio-rpc-usb-uart cdc-acm-console
     cmake-args: -DCONFIG_SHELL=y -DCONFIG_SHELL_LOG_BACKEND=y -DCONFIG_SENSOR_SHELL=n # -DCONFIG_SERIAL=y -D CONFIG_CONSOLE=y
-    artifact-name: corne_dongle
+    artifact-name: corne_dongle_dbg
 
   - board: nice_nano_v2
     shield: corne_left nice_view_adapter nice_view cirque_pinnacle_central
     snippet: studio-rpc-usb-uart cdc-acm-console
     cmake-args: -DCONFIG_SHELL=y -DCONFIG_SHELL_LOG_BACKEND=y -DCONFIG_SENSOR_SHELL=n # -DCONFIG_SERIAL=y -D CONFIG_CONSOLE=y
-    artifact-name: corne_left_central
+    artifact-name: corne_left_central_dbg
 
   - board: nice_nano_v2
     shield: corne_left nice_view_adapter nice_view
     snippet: cdc-acm-console
     cmake-args: -DCONFIG_SHELL=y -DCONFIG_SHELL_LOG_BACKEND=y -DCONFIG_SENSOR_SHELL=n # -DCONFIG_SERIAL=y -D CONFIG_CONSOLE=y
-    artifact-name: corne_left
+    artifact-name: corne_left_dbg
 
   - board: nice_nano_v2
     shield: corne_right cirque_pinnacle_adapter cirque_pinnacle_trackpad
     snippet: cdc-acm-console
     cmake-args: -DDTC_OVERLAY_FILE=../../config/trackpad.overlay -DCONFIG_SHELL=y -DCONFIG_SHELL_LOG_BACKEND=y -DCONFIG_SENSOR_SHELL=n # -DCONFIG_SERIAL=y -D CONFIG_CONSOLE=y
-    artifact-name: corne_right
+    artifact-name: corne_right_dbg
 
   # barebones
   - board: nice_nano_v2
