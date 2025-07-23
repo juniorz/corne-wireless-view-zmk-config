@@ -38,13 +38,13 @@ include:
 
   - board: nice_nano_v2
     shield: corne_left nice_view_adapter nice_view
-    snippet: cdc-acm-console
+    snippet: studio-rpc-usb-uart cdc-acm-console
     cmake-args: -DCONFIG_SHELL=y -DCONFIG_SHELL_LOG_BACKEND=y -DCONFIG_SENSOR_SHELL=n # -DCONFIG_SERIAL=y -D CONFIG_CONSOLE=y
     artifact-name: corne_left_dbg
 
   - board: nice_nano_v2
     shield: corne_right cirque_pinnacle_adapter cirque_pinnacle_trackpad
-    snippet: cdc-acm-console
+    snippet: studio-rpc-usb-uart cdc-acm-console
     cmake-args: -DDTC_OVERLAY_FILE=../../config/trackpad.overlay -DCONFIG_SHELL=y -DCONFIG_SHELL_LOG_BACKEND=y -DCONFIG_SENSOR_SHELL=n # -DCONFIG_SERIAL=y -D CONFIG_CONSOLE=y
     artifact-name: corne_right_dbg
 
