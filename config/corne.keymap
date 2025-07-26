@@ -16,7 +16,8 @@
 #define HRR(k1,k2,k3,k4) &mt LSHFT k1 &mt LGUI k2 &mt LALT k3 &mt LCTRL k4
 
 // clear bt on hold
-#define BT_TGGL() &bt_toggle &bt_clr &bt_nxt
+//#define BT_TGGL() &bt_toggle BT_CLR BT_NXT
+#define BT_TGGL() &bt_toggle
 
 // macOS print screen (Cmd+Shift+3, Cmd+Shift+4)
 #define PS1() &kp LG(LS(N3))
@@ -36,22 +37,23 @@
         // this creates a &bt behavior that receives 0 arguments
         bt_clr: bt_clr {
             compatible = "zmk,behavior-momentary";
-            label = "BT CLR";
+            label = "BT clear";
             bindings = <&bt BT_CLR>;
         };
 
         bt_nxt: bt_nxt {
             compatible = "zmk,behavior-momentary";
-            label = "BT NXT";
+            label = "BT next";
             bindings = <&bt BT_NXT>;
         };
 
         bt_toggle: behavior_bt_toggle {
             compatible = "zmk,behavior-hold-tap";
+            label = "BT toggle";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&bt>, <&bt>;
+            bindings = <&bt_clr>, <&bt_nxt>;
         };
     };
 
@@ -86,7 +88,7 @@
 
 
         lower_layer {
-            display-name = "Lower";
+            display-name = "symbol";
             bindings = <
 // |----------|---------|---------|---------|---------|---------|    |----------|----------|-----------|---------|---------|---------|
 // | ~        | !       | @       | #       | $       | %       |    | ^        | &        | *         | (       | )       | +       |
@@ -105,7 +107,7 @@
         };
 
         raise_layer {
-            display-name = "Raise";
+            display-name = "number";
             bindings = <
 // |-------|-------|-------|-------|-------|-------|    |-------|-------|-------|--------|--------|--------|
 // | F1    | F2    | F3    | F4    | F5    | F6    |    | F7    | F8    | F9    | F10    | F11    | F12    |
@@ -125,7 +127,7 @@
 
 
         middle_layer {
-            display-name = "Middle";
+            display-name = "config";
             bindings = <
 // |-------|-------|-------|-------|-------|-------|    |-------|-------|-------|--------|--------|--------|
 // |       |       |       | PScr1 | PScr2 |       |    | <<    | Play  | >>    | Vol-   | Vol+   | Mute   |
