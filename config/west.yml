@@ -19,7 +19,34 @@ manifest:
     - name: zmk
       remote: zmkfirmware
       revision: main
+      clone-depth: 1
       import: app/west.yml
+
+    # This has fixed to cdc_ecm
+    - name: zephyr
+      remote: juniorz
+      revision: v3.5.0+zmk-fixes+patches
+      clone-depth: 1
+      import:
+        name-blocklist:
+          - ci-tools
+          - hal_altera
+          - hal_cypress
+          - hal_infineon
+          - hal_microchip
+          - hal_nxp
+          - hal_openisa
+          - hal_silabs
+          - hal_xtensa
+          - hal_st
+          - hal_ti
+          - loramac-node
+          - mcuboot
+          - mcumgr
+          - net-tools
+          - openthread
+          - edtt
+          - trusted-firmware-m
 
     # dongle shield with corne layout
     - name: zmk-corne-dongle
@@ -46,9 +73,9 @@ manifest:
     #   remote: badjeff
     #   revision: main
 
-    # - name: cirque-input-module
-    #   remote: petejohanson
-    #   revision: main
+    - name: cirque-input-module
+      remote: juniorz
+      revision: extra
 
     # - name: mario-peripheral-animation
     #   remote: gpeye

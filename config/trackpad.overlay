@@ -7,13 +7,20 @@
     status = "okay";
 
     // P1.01 on my board
-    dr-gpios = <&gpio1 1 (GPIO_ACTIVE_HIGH)>;
+    //dr-gpios = <&gpio1 1 (GPIO_ACTIVE_HIGH)>;
+    //dr-gpios = <&pro_micro 1 (GPIO_ACTIVE_HIGH)>;
 
-    sensitivity = "3x";
+    // rotate-90;
+    sensitivity = "1x";
     x-invert;
-    rotate-90;
-    sleep;
 
-    //x-axis-z-min = <2>;
-    //y-axis-z-min = <4>;
+    scroll;
+
+    // trackpad is only working when powered by USB.
+    // could it be the sleep configuration?
+    /delete-property/ sleep;
+
+    // https://github.com/qmk/qmk_firmware/blob/36c3f4deba7e4c670736cc95db144b25156e90f1/drivers/sensors/cirque_pinnacle.c#L177
+    x-axis-z-min = <4>;
+    y-axis-z-min = <3>;
 };
