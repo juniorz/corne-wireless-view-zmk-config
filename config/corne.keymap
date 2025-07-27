@@ -17,7 +17,7 @@
 
 // clear bt on hold
 //#define BT_TGGL() &bt_toggle BT_CLR BT_NXT
-#define BT_TGGL() &bt_toggle
+#define BT_TGGL() &bt_toggle &bt_clr &bt_clr
 
 // macOS print screen (Cmd+Shift+3, Cmd+Shift+4)
 #define PS1() &kp LG(LS(N3))
