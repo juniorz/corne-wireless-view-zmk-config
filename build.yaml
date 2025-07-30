@@ -20,7 +20,6 @@ include:
 
   - board: nice_nano_v2
     shield: corne_right cirque_pinnacle_adapter cirque_pinnacle_trackpad
-    cmake-args: -DDTC_OVERLAY_FILE=../../config/trackpad.overlay
     artifact-name: corne_right
 
   # debug
@@ -45,7 +44,7 @@ include:
   - board: nice_nano_v2
     shield: corne_right cirque_pinnacle_adapter cirque_pinnacle_trackpad
     snippet: studio-rpc-usb-uart cdc-acm-console
-    cmake-args: -DDTC_OVERLAY_FILE=../../config/trackpad.overlay -DCONFIG_SHELL=y -DCONFIG_SHELL_LOG_BACKEND=y -DCONFIG_SENSOR_SHELL=n -DCONFIG_ZMK_USB_LOGGING=y -DCONFIG_INPUT_LOG_LEVEL_DBG=y # -DCONFIG_SERIAL=y -D CONFIG_CONSOLE=y
+    cmake-args: -DCONFIG_SHELL=y -DCONFIG_SHELL_LOG_BACKEND=y -DCONFIG_SENSOR_SHELL=n -DCONFIG_ZMK_USB_LOGGING=y -DCONFIG_INPUT_LOG_LEVEL_DBG=y # -DCONFIG_SERIAL=y -D CONFIG_CONSOLE=y
     artifact-name: corne_right_dbg
 
   # barebones
