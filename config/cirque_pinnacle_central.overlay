@@ -2,15 +2,20 @@
 
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 / {
     glidepoint_listener {
         compatible = "zmk,input-listener";
-        input-processors = <&zip_xy_scaler 3 2>;
+        input-processors = // 3 2 = 1.5, 5 4 = 1.25, 6 5 = 1.2
+                           <&zip_xy_scaler 5 4>,
+                           <&zip_temp_layer 4 2000>;
 
         scroller {
             layers = <1>;
-            input-processors = <&zip_xy_to_scroll_mapper>;
+            input-processors =  <&zip_xy_scaler 1 16>,                          // will the result be 5/4 * 1/16 = 5/16?
+                                <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, // natural scrolling
+                                <&zip_xy_to_scroll_mapper>;
             process-next;
         };
     };
