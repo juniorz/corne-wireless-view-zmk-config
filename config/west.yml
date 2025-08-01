@@ -25,7 +25,8 @@ manifest:
     # This has fixed to cdc_ecm
     - name: zephyr
       remote: juniorz
-      revision: v3.5.0+zmk-fixes+patches
+      #revision: v3.5.0+zmk-fixes+patches
+      revision: v3.6.0-rebase
       clone-depth: 1
       import:
         name-blocklist:
