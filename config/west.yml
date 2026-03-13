@@ -9,9 +9,6 @@ manifest:
     - name: englmaxi
       url-base: https://github.com/englmaxi
 
-    # - name: petejohanson
-    #   url-base: https://github.com/petejohanson
-
     - name: gpeye
       url-base: https://github.com/GPeye
 
@@ -22,10 +19,9 @@ manifest:
       #clone-depth: 1
       import: app/west.yml
 
-    # This has a fix to cdc_ecm
     - name: zephyr
       remote: juniorz
-      revision: v3.5.0+zmk-fixes+patches
+      revision: v3.5.0+zmk-fixes+patches   # patched with a fix to cdc_ecm
       clone-depth: 1
       import:
         name-blocklist:
@@ -57,8 +53,13 @@ manifest:
     # cirque pinnacle
     - name: zmk-keyboard-cirque-pinnacle
       remote: juniorz
-      revision: main
+      revision: v0.3
       import: west.yml
+
+    # petejohanson/cirque-input-module with patches
+    - name: cirque-input-module
+      remote: juniorz
+      revision: extra
 
     - name: zmk-dongle-display
       remote: englmaxi
@@ -73,10 +74,6 @@ manifest:
     # - name: zmk-split-peripheral-output-relay
     #   remote: badjeff
     #   revision: main
-
-    - name: cirque-input-module
-      remote: juniorz
-      revision: extra
 
     # - name: mario-peripheral-animation
     #   remote: gpeye
