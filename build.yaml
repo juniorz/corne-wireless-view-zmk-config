@@ -49,7 +49,7 @@ include:
 
   # barebones
   - board: nice_nano@2.0.0//zmk # not really a nice!nano but pin compatible?
-    shield: dongle_display central_dongle_input
+    shield: central_dongle_input dongle_display
     snippet: studio-rpc-usb-uart
     artifact-name: corne_dongle_min
 
