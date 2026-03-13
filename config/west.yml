@@ -3,84 +3,55 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
 
-    - name: juniorz
-      url-base: https://github.com/juniorz
-
     - name: englmaxi
       url-base: https://github.com/englmaxi
 
-    - name: gpeye
-      url-base: https://github.com/GPeye
+    - name: juniorz
+      url-base: https://github.com/juniorz
+
+    # - name: petejohanson
+    #   url-base: https://github.com/petejohanson
+
+    # - name: gpeye
+    #   url-base: https://github.com/GPeye
 
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3
-      #clone-depth: 1
+      revision: main
+      clone-depth: 1
       import: app/west.yml
 
-    - name: zephyr
-      remote: juniorz
-      revision: v3.5.0+zmk-fixes+patches   # patched with a fix to cdc_ecm
-      clone-depth: 1
-      import:
-        name-blocklist:
-          - ci-tools
-          - hal_altera
-          - hal_cypress
-          - hal_infineon
-          - hal_microchip
-          - hal_nxp
-          - hal_openisa
-          - hal_silabs
-          - hal_xtensa
-          - hal_st
-          - hal_ti
-          - loramac-node
-          - mcuboot
-          - mcumgr
-          - net-tools
-          - openthread
-          - edtt
-          - trusted-firmware-m
-
-    # dongle shield with corne layout
-    # TODO: move those changes to this repo.
-    - name: zmk-corne-dongle
-      remote: juniorz
-      revision: v0.3
+    # dongle-display
+    - name: zmk-dongle-display
+      remote: englmaxi
+      revision: main # zephir 4.1
 
     # cirque pinnacle
     - name: zmk-keyboard-cirque-pinnacle
       remote: juniorz
-      revision: v0.3
-      import: west.yml
+      revision: main
 
-    # petejohanson/cirque-input-module with patches
-    - name: cirque-input-module
-      remote: juniorz
-      revision: extra
+    # # - name: zmk-analog-input-driver
+    # #   remote: badjeff
+    # #   revision: main
+    # # - name: zmk-split-peripheral-input-relay
+    # #   remote: badjeff
+    # #   revision: main
+    # # - name: zmk-split-peripheral-output-relay
+    # #   remote: badjeff
+    # #   revision: main
 
-    - name: zmk-dongle-display
-      remote: englmaxi
-      revision: v0.3
+    # - name: cirque-input-module
+    #   remote: juniorz
+    #   revision: extra
 
-    # - name: zmk-analog-input-driver
-    #   remote: badjeff
-    #   revision: main
-    # - name: zmk-split-peripheral-input-relay
-    #   remote: badjeff
-    #   revision: main
-    # - name: zmk-split-peripheral-output-relay
-    #   remote: badjeff
-    #   revision: main
-
-    # - name: mario-peripheral-animation
-    #   remote: gpeye
-    #   revision: main
-    # - name: hammerbeam-slideshow
-    #   remote: gpeye
-    #   revision: main
+    # # - name: mario-peripheral-animation
+    # #   remote: gpeye
+    # #   revision: main
+    # # - name: hammerbeam-slideshow
+    # #   remote: gpeye
+    # #   revision: main
 
   self:
     path: config
