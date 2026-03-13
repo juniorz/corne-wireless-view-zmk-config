@@ -48,10 +48,10 @@ include:
   #   artifact-name: corne_right_dbg
 
   # barebones
-  - board: nice_nano@2.0.0//zmk
-    shield: eyeslash_corne_central_dongle dongle_display
-    snippet: studio-rpc-usb-uart
-    artifact-name: corne_dongle_min
+  # - board: nice_nano@2.0.0//zmk
+  #   shield: eyeslash_corne_central_dongle dongle_display
+  #   snippet: studio-rpc-usb-uart
+  #   artifact-name: corne_dongle_min
 
   - board: nice_nano@2.0.0//zmk
     shield: corne_left
