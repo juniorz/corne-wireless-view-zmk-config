@@ -48,8 +48,8 @@ include:
   #   artifact-name: corne_right_dbg
 
   # barebones
-  - board: nice_nano@2.0.0//zmk
-    shield: dongle_display # eyeslash_corne_central_dongle 
+  - board: nice_nano@2.0.0//zmk # not really a nice!nano but pin compatible?
+    shield: dongle_display central_dongle_input
     snippet: studio-rpc-usb-uart
     artifact-name: corne_dongle_min
 

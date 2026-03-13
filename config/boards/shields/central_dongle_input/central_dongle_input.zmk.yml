@@ -1,0 +1,14 @@
+file_format: "1"
+id: central_dongle_input
+name: Central dongle with Corne layout
+url: https://github.com/juniorz
+type: shield
+requires:
+ - pro_micro
+ - i2c_oled
+features:
+  - keys
+  - display
+outputs:
+  - usb
+  - ble
