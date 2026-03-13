@@ -18,7 +18,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: d09087f4dc280b8fdb1d32d63b03cc10162b89ce
+      revision: v0.2
       #clone-depth: 1
       import: app/west.yml
 
@@ -61,7 +61,7 @@ manifest:
 
     - name: zmk-dongle-display
       remote: englmaxi
-      revision: 4a76cc79069676b4d990c34de1d30d6a869f45ec
+      revision: v0.3
 
     # - name: zmk-analog-input-driver
     #   remote: badjeff
