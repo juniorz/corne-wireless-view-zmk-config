@@ -3,11 +3,11 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
 
+    - name: englmaxi
+      url-base: https://github.com/englmaxi
+
     # - name: juniorz
     #   url-base: https://github.com/juniorz
-
-    # - name: englmaxi
-    #   url-base: https://github.com/englmaxi
 
     # - name: petejohanson
     #   url-base: https://github.com/petejohanson
@@ -22,6 +22,11 @@ manifest:
       clone-depth: 1
       import: app/west.yml
 
+    # dongle-display
+    - name: zmk-dongle-display
+      remote: englmaxi
+      revision: main # zephir 4.1
+
     # # dongle shield with corne layout
     # - name: zmk-corne-dongle
     #   remote: juniorz
@@ -29,9 +34,6 @@ manifest:
 
     # # cirque pinnacle
 
-    # - name: zmk-dongle-display
-    #   remote: englmaxi
-    #   revision: main
 
     # # - name: zmk-analog-input-driver
     # #   remote: badjeff
