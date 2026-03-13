@@ -49,9 +49,10 @@ manifest:
           - trusted-firmware-m
 
     # dongle shield with corne layout
+    # TODO: move those changes to this repo.
     - name: zmk-corne-dongle
       remote: juniorz
-      revision: main
+      revision: v0.3
 
     # cirque pinnacle
     - name: zmk-keyboard-cirque-pinnacle
