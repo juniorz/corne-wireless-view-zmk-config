@@ -27,13 +27,11 @@ manifest:
       remote: englmaxi
       revision: main # zephir 4.1
 
-    # # dongle shield with corne layout
-    # - name: zmk-corne-dongle
-    #   remote: juniorz
-    #   revision: main
-
-    # # cirque pinnacle
-
+    # cirque pinnacle
+    - name: zmk-keyboard-cirque-pinnacle
+      remote: juniorz
+      revision: main
+      import: west.yml
 
     # # - name: zmk-analog-input-driver
     # #   remote: badjeff

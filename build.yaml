@@ -4,10 +4,10 @@ include:
   # # It also has a dongle, which seems to be a clone of https://github.com/englmaxi/zmk-dongle-display
   # # - AliExpress product: https://www.aliexpress.com/item/1005009056257222.html
   # # - Firmware config: https://github.com/a741725193/zmk-sofle-dongle/
-  # - board: nice_nano@2.0.0//zmk
-  #   shield: eyeslash_corne_central_dongle dongle_display cirque_pinnacle_central
-  #   snippet: studio-rpc-usb-uart
-  #   artifact-name: corne_dongle
+  - board: nice_nano@2.0.0//zmk
+    shield: central_dongle_input dongle_display cirque_pinnacle_central
+    snippet: studio-rpc-usb-uart
+    artifact-name: corne_dongle
 
   # - board: nice_nano@2.0.0//zmk
   #   shield: corne_left nice_view_adapter nice_view cirque_pinnacle_central
