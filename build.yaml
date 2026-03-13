@@ -9,18 +9,18 @@ include:
     snippet: studio-rpc-usb-uart
     artifact-name: corne_dongle
 
-  # - board: nice_nano@2.0.0//zmk
-  #   shield: corne_left nice_view_adapter nice_view cirque_pinnacle_central
-  #   snippet: studio-rpc-usb-uart
-  #   artifact-name: corne_left_central
+  - board: nice_nano@2.0.0//zmk
+    shield: corne_left nice_view_adapter nice_view cirque_pinnacle_central
+    snippet: studio-rpc-usb-uart
+    artifact-name: corne_left_central
 
-  # - board: nice_nano@2.0.0//zmk
-  #   shield: corne_left nice_view_adapter nice_view
-  #   artifact-name: corne_left
+  - board: nice_nano@2.0.0//zmk
+    shield: corne_left nice_view_adapter nice_view
+    artifact-name: corne_left
 
-  # - board: nice_nano@2.0.0//zmk
-  #   shield: corne_right cirque_pinnacle_adapter cirque_pinnacle_trackpad
-  #   artifact-name: corne_right
+  - board: nice_nano@2.0.0//zmk
+    shield: corne_right cirque_pinnacle_adapter cirque_pinnacle_trackpad
+    artifact-name: corne_right
 
   # # debug
   # - board: nice_nano@2.0.0//zmk
