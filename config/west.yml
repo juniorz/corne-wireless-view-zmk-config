@@ -3,11 +3,11 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
 
-    - name: juniorz
-      url-base: https://github.com/juniorz
+    # - name: juniorz
+    #   url-base: https://github.com/juniorz
 
-    - name: englmaxi
-      url-base: https://github.com/englmaxi
+    # - name: englmaxi
+    #   url-base: https://github.com/englmaxi
 
     # - name: petejohanson
     #   url-base: https://github.com/petejohanson
@@ -22,37 +22,37 @@ manifest:
       clone-depth: 1
       import: app/west.yml
 
-    # dongle shield with corne layout
-    - name: zmk-corne-dongle
-      remote: juniorz
-      revision: main
-
-    # cirque pinnacle
-
-    - name: zmk-dongle-display
-      remote: englmaxi
-      revision: main
-
-    # - name: zmk-analog-input-driver
-    #   remote: badjeff
-    #   revision: main
-    # - name: zmk-split-peripheral-input-relay
-    #   remote: badjeff
-    #   revision: main
-    # - name: zmk-split-peripheral-output-relay
-    #   remote: badjeff
+    # # dongle shield with corne layout
+    # - name: zmk-corne-dongle
+    #   remote: juniorz
     #   revision: main
 
-    - name: cirque-input-module
-      remote: juniorz
-      revision: extra
+    # # cirque pinnacle
 
-    # - name: mario-peripheral-animation
-    #   remote: gpeye
+    # - name: zmk-dongle-display
+    #   remote: englmaxi
     #   revision: main
-    # - name: hammerbeam-slideshow
-    #   remote: gpeye
-    #   revision: main
+
+    # # - name: zmk-analog-input-driver
+    # #   remote: badjeff
+    # #   revision: main
+    # # - name: zmk-split-peripheral-input-relay
+    # #   remote: badjeff
+    # #   revision: main
+    # # - name: zmk-split-peripheral-output-relay
+    # #   remote: badjeff
+    # #   revision: main
+
+    # - name: cirque-input-module
+    #   remote: juniorz
+    #   revision: extra
+
+    # # - name: mario-peripheral-animation
+    # #   remote: gpeye
+    # #   revision: main
+    # # - name: hammerbeam-slideshow
+    # #   remote: gpeye
+    # #   revision: main
 
   self:
     path: config
