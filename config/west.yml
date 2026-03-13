@@ -6,8 +6,8 @@ manifest:
     - name: englmaxi
       url-base: https://github.com/englmaxi
 
-    # - name: juniorz
-    #   url-base: https://github.com/juniorz
+    - name: juniorz
+      url-base: https://github.com/juniorz
 
     # - name: petejohanson
     #   url-base: https://github.com/petejohanson
