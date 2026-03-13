@@ -31,7 +31,6 @@ manifest:
     - name: zmk-keyboard-cirque-pinnacle
       remote: juniorz
       revision: main
-      import: west.yml
 
     # # - name: zmk-analog-input-driver
     # #   remote: badjeff
